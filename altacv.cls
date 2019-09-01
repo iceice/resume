@@ -123,7 +123,7 @@
   \begin{adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}}
   {\end{adjustwidth}}
 
-\newcommand{\emailsymbol}{\faAt}
+\newcommand{\emailsymbol}{\faEnvelope}
 \newcommand{\phonesymbol}{\faPhone}
 \newcommand{\homepagesymbol}{\faChain}
 \newcommand{\locationsymbol}{\faMapMarker}
@@ -175,7 +175,7 @@
 
 \newcommand{\cvsection}[2][]{%
   \bigskip%
-  \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
+  \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr3.5pt-\baselineskip}\raggedright\input{#1}}}%
   {\color{heading}\LARGE\bfseries\MakeUppercase{#2}}\\[-1ex]%
   {\color{heading}\rule{\linewidth}{2pt}\par}\medskip
 }

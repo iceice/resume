@@ -4,11 +4,17 @@
 % Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
 %%%%%%%%%%%%%%%%
 
-\documentclass[10pt,a4paper,ragged2e]{altacv}
+\documentclass[12pt,a4paper,ragged2e]{altacv}
 \usepackage{xeCJK}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,   
+    urlcolor=black,
+}
 
 % Change the page layout if you need to
-\geometry{left=2.5cm,right=10.5cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=2.25cm,bottom=1.25cm}
+% \geometry{left=2.5cm,right=10.5cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=2.25cm,bottom=1.25cm}
+\geometry{left=1.8cm,right=9.8cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
 
 % Change the font if you want to, depending on whether
 \setmainfont{Lato}
@@ -43,7 +49,7 @@
   % \mailaddress{Address, Street, 00000 County}
   % \location{Location, COUNTRY}
   \qquad
-  \homepage{https://deepcooking.cn/}
+  \homepage{\href{https://deepcooking.cn}{https://deepcooking.cn}}
   % \twitter{@twitterhandle}
   % \linkedin{linkedin.com/in/yourid}
   % \github{https://github.com/liysss}
@@ -76,30 +82,31 @@
 %	             EXPERIENCE SECTION
 %-------------------------------------------------
 \cvsection{实习经历}
-\cvevent{开发工程师}{字节跳动 ( data-系统-网络 )}{ 2019.6 -- 至今}{北京,中国}
-% \begin{itemize}
-% \item 李延松 and development of Computer Vision algorithms centered around the video surveillance domain in collaboration with NCETIS, IIT Bombay.
-% \smallskip
-% \item Working with team on design, development and integration of real-time video analytic solution.
-% \smallskip
-% \item Leading the team on the training and evaluation of Deep Neural Network models.
-% \smallskip
-% \item Experience with performance analysis, optimizations and benchmark evaluations.
-% \end{itemize}
+\cvevent{软件开发工程师}{字节跳动 ( data-系统-网络 )}{ 2019.6 -- 至今}{北京,中国}
+\cvproject{\ Traffic Monitoring}
+\setlength{\baselineskip}{18pt}
+\begin{itemize}
+\justifying
+\item 为了监控数据中心的网络流量是否异常，我们在数据中心的交换机上部署了Sflow，该软件采样交换机上的数据报发送给指定的服务器
+\item 服务器上面部署TrafficMonitor收集指定socket上面的UDP数据包，分析后写入Redis和Kafka
+\item 为了高效的存储数据，以及提高流量统计的正确率，复现了KDD'18的论文《HeavyGuardian: Separate and Guard Hot Items in Data Streams》
+\end{itemize}
 
-% \divider
+\cvproject{\ \ NAT流量调度}
+\setlength{\baselineskip}{18pt}
+\begin{itemize}
+\justifying
+\item 分别建立电信、联通、移动的NAT服务器，通过ipip库得到每个ip对应的运营商，然后将路由发送到对应服务器
+\item 服务器通过ExaBGP与路由器建立BGP连接，发送和接收路由更新消息
+\end{itemize}
+
 
 \cvsection{奖励荣誉}
-\smallskip
 \begin{itemize}
 \item 吉林大学2015-2016学年三等奖学金
-\smallskip
-\item 吉林大学2015-2016学年单项奖学金
-\smallskip
+% \item 吉林大学2015-2016学年单项奖学金
 \item 吉林大学2016-2017学年一等奖学金
-\smallskip
 \item 吉林大学2016-2017学年校优秀学生
-\smallskip
 \item “AceTradeer程序化交易系统V1.0”软件著作权
 \end{itemize}
 
