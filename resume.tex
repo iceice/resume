@@ -38,6 +38,83 @@
 %	                  TITILE
 %-------------------------------------------------
 \begin{document}
+\name{Yansong Li}
+\tagline{Peking University, Beijing}
+\personalinfo{
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{liyansong@pku.edu.cn}
+  \qquad
+  \phone{185-1466-2277}
+  % \mailaddress{Address, Street, 00000 County}
+  % \location{Location, COUNTRY}
+  \qquad
+  \homepage{\href{https://deepcooking.cn}{https://deepcooking.cn}}
+  % \twitter{@twitterhandle}
+  % \linkedin{linkedin.com/in/yourid}
+  % \github{https://github.com/liysss}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+%-------------------------------------------------
+%	              EDUCATION SECTION
+%-------------------------------------------------
+\cvsection[sidebar_en]{Education}
+\cveduen{M.S. in Computer Science}{Peking University}{2018.9 -- 2021.7}
+
+\divider
+
+\cveduen{B.S. in Computer Science}{Jilin University}{2013.9 -- 2017.7}
+
+%-------------------------------------------------
+%	             EXPERIENCE SECTION
+%-------------------------------------------------
+\cvsection{intership}
+\cvevent{Software Development Engineer}{ByteDance ( Data-System-Network )}{ 2019.6 -- 2019.10}{Beijing,China}
+\cvproject{\ Traffic Monitoring}
+\setlength{\baselineskip}{16pt}
+\begin{itemize}
+\justifying
+\item In order to \textbf{monitor} whether the \textbf{network traffic in the data center} is abnormal, we have deployed \textbf{sflow} on the switch.
+The software \textbf{samples datagram} on the switch and sends it to the designated server.
+\item Implement \textbf{trafficmonitor} to collect UDP packets, and write to redis and Kafka after analysis.
+\item In order to \textbf{efficiently use memory} to store data and improve the \textbf{accuracy} of hot data statistics.
+I implemented the \textbf{heavyguardian} data structure to save hot data.
+\end{itemize}
+
+\cvproject{\ \ NAT Traffic scheduling}
+\setlength{\baselineskip}{16pt}
+\begin{itemize}
+\justifying
+\item Establish the \textbf{NAT} servers of CT, CU and CMCC respectively, then we can send route to server.
+\item The server establishes a BGP connection with the router through \textbf{ExaBGP software}.
+\end{itemize}
+
+
+\cvsection{honors}
+\begin{itemize}
+\item 2015-2016 The First Prize Scholarship
+\item 2016-2017 The Third Prize Scholarship
+\item 2016-2017 The University Excellent Student 
+\item AceTradeer V1.0 software copyright
+\end{itemize}
+
+
+\clearpage
+\nocite{*}
+
 \name{李延松}
 \tagline{北京大学信息科学与技术学院}
 \personalinfo{
@@ -71,7 +148,7 @@
 %-------------------------------------------------
 %	              EDUCATION SECTION
 %-------------------------------------------------
-\cvsection[sidebar]{教育背景}
+\cvsection[sidebar_ch]{教育背景}
 \cvedu{北京大学}{信息科学技术学院}{硕士}{计算机系统结构}{2018.9 -- 2021.7}
 
 \divider
@@ -82,14 +159,14 @@
 %	             EXPERIENCE SECTION
 %-------------------------------------------------
 \cvsection{实习经历}
-\cvevent{软件开发工程师}{字节跳动 ( data-系统-网络 )}{ 2019.6 -- 至今}{北京,中国}
+\cvevent{软件开发工程师}{字节跳动 ( data-系统-网络 )}{ 2019.6 -- 2019.10}{北京,中国}
 \cvproject{\ Traffic Monitoring}
 \setlength{\baselineskip}{18pt}
 \begin{itemize}
 \justifying
 \item 为了监控数据中心的网络流量是否异常，我们在数据中心的交换机上部署了Sflow，该软件采样交换机上的数据报发送给指定的服务器
 \item 服务器上面部署TrafficMonitor收集指定socket上面的UDP数据包，分析后写入Redis和Kafka
-\item 为了高效的存储数据，以及提高流量统计的正确率，复现了KDD'18的论文《HeavyGuardian: Separate and Guard Hot Items in Data Streams》
+\item 为了高效的使用内存存储数据，以及提高热点数据统计的正确率，实现了HeavyGuardian数据结构来保存热点数据
 \end{itemize}
 
 \cvproject{\ \ NAT流量调度}

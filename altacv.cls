@@ -209,6 +209,15 @@
   \normalsize
 }
 
+\newcommand{\cveduen}[3]{%
+  {\normalsize\color{accent}#1\par}
+  \medskip
+  {\large\textbf{\color{accent}#2\quad}}
+  \smallskip
+  {\small\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}
+  \normalsize
+}
+
 \newcommand{\cvproject}[1]{%
   {\textbf{\color{accent}#1}\par}
   \smallskip\normalsize
