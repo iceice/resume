@@ -1,0 +1,83 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external}
+% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+\geometry{a4paper,left=2cm,right=2cm,top=1cm,bottom=1cm}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{李延松}
+
+\basicInfo{
+  \email{liyansong.cs@gmail.com} \textperiodcentered\ 
+  \phone{(+86) 185-1466-2277} \textperiodcentered\ 
+  \homepage[]{https://deepcooking.cn/}
+}
+ 
+\section{\faGraduationCap \ 教育背景}
+\schoolsubsection{\textbf{北京大学}}{信息科学技术学院}{2018.9 -- 至今}
+\textit{在读硕士研究生}\quad 计算机系统结构，预计于 2021 年 7 月毕业
+\schoolsubsection{\textbf{吉林大学}}{计算机科学与技术学院}{2013.9 -- 2017.7}
+\textit{学士}\quad 计算机科学与技术
+
+\section{\faBuilding \ 实习经历}
+\companysubsection{\textbf{微软工程院}}{小冰核心对话组}{北京}{2019年11月 -- 至今}
+\begin{onehalfspacing}
+\textbf{分布式任务运行平台}
+\begin{itemize}
+  \item 搭建内部脚本任务的运行管理平台，以供研发以及产品经理使用。后端使用Python的Django框架，前端使用Vue.js和Element-ui进行实现。
+  \item 脚本任务执行方便，运行状态更直观，可以实时的查看脚本的执行状态，并进行统一的管理。
+  \item 实现了任务的分布式执行，提升了效率。
+\end{itemize}
+\end{onehalfspacing}
+
+\companysubsection{\textbf{字节跳动}}{data-系统-网络}{北京}{2019年6月 -- 2019年10月}
+\begin{onehalfspacing}
+\textbf{网络流量监控系统}
+\begin{itemize}
+  \item 为了检测数据中心的网络流量是否异常，我们在数据中心的交换机上面部署了Sflow对网络流量进行采样，该软件将采样到的数据报通过UDP发送到指定的服务器，方便后续的分析。
+  \item 服务器上面部署我们开发的 TrafficMonitor 系统收集指定 socket 上面的数据包，进行流量统计与聚合后写入Redis与kafka。
+  \item 为了高效的使用内存，以及提高热点数据统计的正确率，实现了HeavyGuardian数据结构来保存热点数据。
+\end{itemize}
+\end{onehalfspacing}
+
+\section{\faArchive \ 项目经历}
+\begin{onehalfspacing}
+\textbf{基于知识图谱和LSTM的股票预测}
+\begin{itemize}
+  \item 基于标普500的股票价格数据，新闻数据，对股票的涨跌进行预测。
+  \item 对新闻标题抽取出三元组信息(公司A，行为，公司B)，结合知识图谱进行Embedding。将得到的词向量与价格数据结合，通过LSTM进行预测。准确率比随机算法提升8\%。
+\end{itemize}
+\textbf{AceTrader期货交易软件}
+\begin{itemize}
+  \item 该项目主要是基于上期技术提供的期货CTP接口实现的，通过对接口的重写，实现了期货行情订阅的功能以及期货的交易功能。可以基于设定价格完成快速交易，提升交易成功率。
+  \item 主要框架使用C++来编写，图形化界面部分使用QT来编写。
+\end{itemize}
+\end{onehalfspacing}
+
+\section{\faicon{trophy}\ 获奖情况}
+\begin{onehalfspacing}
+\datedline{吉林大学2015-2016学年三等奖学金，单项奖学金}{2016 年 9 月}
+\datedline{吉林大学2016-2017学年一等奖学金，校优秀学生}{2017 年 6 月}
+\end{onehalfspacing}
+
+\section{\faicon{user}\ 其他信息}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item GitHub: \href{https://github.com/iceice}{https://github.com/iceice}
+  \item 技能: C++、Python、Golang、MySQL、Linux、Vim
+  \item 课程：数据结构、操作系统、计算机网络、机器学习、深度学习
+  \item 语言: 英语 - 熟练(CET-6)
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
