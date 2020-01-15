@@ -4,7 +4,6 @@
 
 \documentclass{resume}
 \usepackage{zh_CN-Adobefonts_external}
-% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
 \geometry{a4paper,left=2cm,right=2cm,top=1cm,bottom=1cm}
@@ -37,12 +36,12 @@
 \end{itemize}
 \end{onehalfspacing}
 
-\companysubsection{\textbf{字节跳动}}{data-系统-网络}{北京}{2019年6月 -- 2019年10月}
+\companysubsection{\textbf{字节跳动}}{Data-系统-网络}{北京}{2019年6月 -- 2019年10月}
 \begin{onehalfspacing}
 \textbf{网络流量监控系统}
 \begin{itemize}
-  \item 为了检测数据中心的网络流量是否异常，我们在数据中心的交换机上面部署了Sflow对网络流量进行采样，该软件将采样到的数据报通过UDP发送到指定的服务器，方便后续的分析。
-  \item 服务器上面部署我们开发的 TrafficMonitor 系统收集指定 socket 上面的数据包，进行流量统计与聚合后写入Redis与kafka。
+  \item 为了检测数据中心的网络流量是否异常，在数据中心的交换机上面部署了Sflow对网络流量进行采样，该软件将采样到的数据报通过UDP发送到指定的服务器，方便后续的分析。
+  \item 服务器上面部署我开发的 TrafficMonitor 系统收集指定 socket 上面的数据包，进行流量统计与聚合后写入Redis与kafka。
   \item 为了高效的使用内存，以及提高热点数据统计的正确率，实现了HeavyGuardian数据结构来保存热点数据。
 \end{itemize}
 \end{onehalfspacing}
@@ -52,7 +51,7 @@
 \textbf{基于知识图谱和LSTM的股票预测}
 \begin{itemize}
   \item 基于标普500的股票价格数据，新闻数据，对股票的涨跌进行预测。
-  \item 对新闻标题抽取出三元组信息(公司A，行为，公司B)，结合知识图谱进行Embedding。将得到的词向量与价格数据结合，通过LSTM进行预测。准确率比随机算法提升8\%。
+  \item 对新闻标题抽取出三元组信息 <公司A，行为，公司B> ，结合知识图谱进行Embedding。将得到的词向量与价格数据结合，通过LSTM进行预测。准确率比随机算法提升8\%。
 \end{itemize}
 \textbf{AceTrader期货交易软件}
 \begin{itemize}

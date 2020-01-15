@@ -1,76 +1,67 @@
 % !TEX program = xelatex
 
 \documentclass{resume}
-%\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
-%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+
+\geometry{a4paper,left=2cm,right=2cm,top=1cm,bottom=1cm}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{Bin Yuan}
+\name{Yansong Li}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
+  \email{liyansong.cs@gmail.com} \textperiodcentered\ 
+  \phone{(+86) 185-1466-2277} \textperiodcentered\ 
+  \homepage[]{https://deepcooking.cn/}
+}
 
 \section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2013 -- Present}
-\textit{Master student} in Electronics Engineering (EE), expected March 2016
-\datedsubsection{\textbf{Xidian University}, Shaanxi, China}{2009 -- 2013}
-\textit{B.S.} in Electronics Engineering (EE)
+\datedsubsection{\textbf{Peking University (PKU)}, Beijing, China}{2018.9 -- Present}
+\textit{Master student} in Computer Science (CS), expected July 2021
+\datedsubsection{\textbf{Jilin University (JLU)}, JiLin, China}{2013.9 -- 2017.7}
+\textit{B.S.} in Computer Science (CS)
 
-\section{\faUsers\ Experience}
-\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
-\role{Summer Intern}{Manager: xxx}
-Brief introduction: xxx.
+\section{\faBuilding\ Internship}
+\companysubsection{\textbf{Microsoft (STCA)}}{XiaoIce CoreChat Team}{Beijing}{2019.11 -- Present}
+\textbf{Distributed task management platform}
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Implemented an operation management platform of internal script tasks for software engineers and product managers. The back-end uses Python's Django framework, and the front-end uses Vue.js and Element-ui for implementation.
+  \item The operation management makes it more convenient to control scripts running and view running status. The platform could view running results in real time and manage tasks in a unified way. 
+  \item Implemented distributed scheduling to improve efficiency.
 \end{itemize}
 
-\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
-\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
+\companysubsection{\textbf{ByteDance}}{Data-System-Network Team}{Beijing}{2019.6 -- 2019.10}
+\textbf{Network traffic monitoring system}
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Deployed Sflow on the switches in the data center to detect whether the network traffic in the data center is abnormal. The software sends the sampled datagrams to the specified server via UDP.
+  \item Deployed the TrafficMonitor system on the server to collect the data packets on the specified socket, which could perform traffic aggregation and write result to Redis and Kafka.
+  \item In order to use memory efficiently and improve the accuracy of hotspot data statistics, I used HeavyGuardian data structure to save hotspot data.
 \end{itemize}
 
-\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
-\role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
+\section{\faArchive \ Projects}
+\textbf{Stock Forecasting Based on Knowledge Graph and LSTM}
 \begin{itemize}
-  \item Easy to be further customized or extended
-  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.5.0 support
+  \item Aimed to forecast the rise and fall of stock prices by learning the price and news features of S\&P 500.
+  \item Extracted the triple information < Company A, Behavior, Company B> from the news headline, embedding with knowledge graph to get a word vector.
+  \item Fed all features to LSTM. Achieved 8\% higher accuracy than pure random prediction in given dataset.
+\end{itemize}
+\textbf{Acetrader futures trading software}
+\begin{itemize}
+  \item This project is mainly based on the CTP interface of futures provided by the Shanghai futures exchange. I implement the subscription function and transaction function by rewriting the interface.  
+  \item By setting the closing price in advance, the transaction can be conducted quickly and the success rate of the transaction can be improved.
 \end{itemize}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
+\section{\faicon{trophy}\ Honors}
+\datedline{The Third Prize Scholarship and Individual Scholarship, Jilin University}{2016.9}
+\datedline{The First Prize Scholarship and University Excellent Student, Jilin University}{2017.6}
 
-\section{\faCogs\ Skills}
+\section{\faicon{user}\ Miscellaneous}
+% increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C == Python > C++ > Java
-  \item Platform: Linux
-  \item Development: Web, xxx
-\end{itemize}
-
-\section{\faHeartO\ Honors and Awards}
-\datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-\datedline{Other awards}{2015}
-
-\section{\faInfo\ Miscellaneous}
-\begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
-  \item Languages: English - Fluent, Mandarin - Native speaker
+  \item GitHub: \href{https://github.com/iceice}{https://github.com/iceice}
+  \item Skills: C++, Python, Golang, MySQL, Linux, Vim
+  \item Courses: Data Structure, Operating System, Computer Network, Machine Learning, Deep Learning
+  \item Languages: English - Fluent (CET-6)
 \end{itemize}
 
 %% Reference
